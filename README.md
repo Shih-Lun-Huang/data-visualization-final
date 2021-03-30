@@ -5,7 +5,8 @@
 組員: 09370011 黃士倫 08370013 黃任杰  09370014 黎芯羽
 指導老師:黃福銘教授
 
-網站網址: http://myweb.scu.edu.tw/~09370011/viz/test_nav.html
+網站網址: http://myweb.scu.edu.tw/~09370011/viz/index.html
+Infographic網址: http://myweb.scu.edu.tw/~09370011/viz/infographic.html
 
 資料來源、名稱:
 Kaggle - Steam Store Games (Clean dataset) 中 steam.csv 檔案
