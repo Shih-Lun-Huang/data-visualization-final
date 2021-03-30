@@ -1,0 +1,505 @@
+<!-- Made by Shih-Lun,Huang -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>誰是一級玩家？</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="./css/main2.css">
+	<script src="//cdn.wordart.com/wordart.min.js" async defer></script>
+</head>
+<body>
+	<!-- nav -->
+	<nav class="navbar smart-scroll">
+		<div class="nav_container">
+			<div class="nav_logo_container">
+				<a href="./index2.html">
+					<div class="nav_logo"></div>
+				</a>
+				<div class="logo_text">
+					<p>誰是一級玩家?</p>
+				</div>
+			</div>
+			<!-- rwd -->
+			<!-- <div class="burger"> -->
+				<div class="menu-btn">
+				  <div class="menu-btn__burger"></div>
+				</div>
+			<!-- </div> -->
+			<div class="nav_list">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a>Charts</a>
+						<div class="dropdown">
+						  <div><a href="index.html#card1">簡介</a></div>
+						  <div><a href="index.html#card2">開發遊戲款數</a></div>
+						  <div><a href="index.html#card3">遊戲類型統計</a></div>
+						  <div><a href="index.html#card4">獨立開發遊戲款數</a></div>
+						  <div><a href="index.html#card5">玩家累積遊玩時間</a></div>
+						  <div><a href="index.html#card6">遊戲類型累積遊玩時間</a></div>
+						  <!-- <div><a href="index.html#card7">各年度熱門遊戲</a></div> -->
+						</div>
+					</li>
+					<li><a href="infographic.html">Infographic</a></li>
+					<li><a href="index.html#footer">Team</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu_list">
+			<ul>
+				<li><a href="#product">Product</a></li>
+				<li><a href="#research_project">Research Project</a></li>
+				<li><a href="#honors_and_awards">Honor & Award</a></li>
+				<li><a href="#team">Team</a></li>
+				<li class="ins_icon" onclick="window.open('https://www.instagram.com/turing_insight_lab/')">
+					<div class="ins_icon_black"></div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container container_bg" id="particles-js"></div>
+	<!-- landing page -->
+	<div class="container video_container" style="background-color: #000">
+		<video autoplay loop muted id="video1">
+		  <source src="https://static.videezy.com/system/resources/previews/000/041/896/original/4K_6.mp4" type="video/mp4" >
+			Your browser does not support the video tag.
+		</video>
+		<div class="video_text middle">
+			<div class="text_container">
+				<p>誰是一級玩家？</p>
+				<p>33,000個Steam遊戲的數據分析</p>
+			</div>
+		</div>
+
+	</div>
+	<!-- card 1 -->
+	<div class="container middle" id="card1">
+		<div class="inner_container middle">
+			<div class="main_container">
+				<div class="des">Steam是目前全世界電腦遊戲界最大的數位發行平台。想了解這個平台上過去到現在遊戲（包含受歡迎的遊戲種類、遊戲開發商、及遊戲數量等相關資訊）的變化情況。跟蹤網站Steam Spy蒐集的資料顯示，Steam在全球已有<span class="emph">2.81億</span>註冊帳戶，同時線上用戶<span class="emph">1,750萬</span>。</div>
+				<div class="card1_img_container middle">
+					<div class="card1_img">
+						<div class="img_num">
+							<span class="count-num">2</span>.<span class="count-num">81</span>億
+						</div>
+					</div>
+					<div class="card1_img">
+						<div class="img_num">
+							<span class="count-num">1,750</span>萬
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- card 2 -->
+	<div class="container middle" id="card2">
+		<div class="inner_container">
+			<div class="title">開發遊戲款數</div>
+			<div class="main_container middle">
+				<div id="myDiv"></div>
+				<div class="des">截至2019年5月為止，Steam遊戲平台已經累積超過<span class="emph"><span class="count-num">33,000</span>款</span>遊戲！</div>
+			</div>
+		</div>
+	</div>
+	<!-- card 3 -->
+	<div class="container middle" id="card3">
+		<div class="inner_container">
+			<div class="title">遊戲類型統計</div>
+			<div class="main_container middle">
+				<div class="des">而這麼多款遊戲，類型以<span class="emph">動作遊戲</span>為大宗，佔了全部的<span class="emph2"><span class="count-num">20</span>.<span class="count-num">61</span>%</span>，第二高的遊戲類型為<span class="emph">獨立遊戲</span>佔<span class="emph2"><span class="count-num">17</span>.<span class="count-num">41</span>%</span>。</div>
+				<div class="wordcloud" data-wordart-src="//cdn.wordart.com/json/9f326u51536c" data-wordart-show-attribution></div>
+			</div>
+		</div>
+	</div>
+	<!-- card 4 -->
+	<div class="container middle" id="card4">
+		<div class="inner_container">
+			<div class="title">獨立開發遊戲款數</div>
+			<div class="main_container middle">
+				<div id="inde_graph"></div>
+				<div class="des">
+					<div>
+						<span class="emph">「獨立遊戲」</span>是近幾年來竄升最快的遊戲類型，同時也反映了在現在的市場中，除了大公司以外，有越來越多獨立遊戲的製作工作室投入了這個領域。
+					</div>
+					<div class="tooltip">
+						<div class="hint_img"></div>
+						<span class="tooltiptext">「獨立遊戲」泛指非遊戲公司開發的遊戲，遊戲開發者必須獨立負擔開發過程中的所有花費。相對而論，獨立遊戲走向較為自由，開發商可以做自己想做的遊戲，往往可以推出嶄新觀點的作品，而不用受制於遊戲公司或市場。</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- card 5 -->
+	<div class="container middle" id="card5">
+		<div class="inner_container">
+			<div class="title">玩家累積遊玩時間</div>
+			<div class="main_container middle">
+				<div class="des">全球在Steam的玩家們累計至2019年5月的遊玩時間，粗估已達到<span class="emph">12兆秒</span><span class="emph2">(約38萬年)</span>。可想而知大家對於遊玩遊戲投入相當大量的時間。</div>
+				<div class="card5_img_container middle">
+					<div class="card5_img">
+						<div class="fire">
+						  	<div class="fire-left">
+						    	<div class="main-fire"></div>
+						    	<div class="particle-fire"></div>
+						  	</div>
+						  	<div class="fire-main">
+						    	<div class="main-fire"></div>
+						    	<div class="particle-fire"></div>
+						  	</div>
+						  	<div class="fire-right">
+						    	<div class="main-fire"></div>
+						    	<div class="particle-fire"></div>
+						  	</div>
+						 	<div class="fire-bottom">
+						    	<div class="main-fire"></div>
+						  	</div>
+						</div>
+						<div class="fire">
+						  	<div class="fire-left">
+						    	<div class="main-fire"></div>
+						    	<div class="particle-fire"></div>
+						  	</div>
+						  	<div class="fire-main">
+						    	<div class="main-fire"></div>
+						    	<div class="particle-fire"></div>
+						  	</div>
+						  	<div class="fire-right">
+						    	<div class="main-fire"></div>
+						    	<div class="particle-fire"></div>
+						  	</div>
+						  	<div class="fire-bottom">
+						    	<div class="main-fire"></div>
+						 	</div>
+						</div>
+						<div class="img_num num2">
+							<span class="count-num">12</span>兆秒
+						</div>
+						<div class="img_num">
+							<span class="count-num">12</span>兆秒
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- card 6 -->
+	<div class="container middle" id="card6">
+		<div class="inner_container">
+			<div class="title">遊戲類型平均遊玩時間</div>
+			<div class="main_container middle">
+				<div id="treemap_plot"></div>
+				<div class="des">圖中每個方塊都是代表著一款遊戲，其大小反映著此款遊戲佔全部遊戲平均遊玩時間的多寡，以<span class="emph">免費遊戲</span>，就佔了<span class="emph2">45%</span>以上的遊玩時間，第二名為<span class="emph">RPG遊戲</span><span class="emph2">(18.62%)</span>，第三名為<span class="emph">動作遊戲</span><span class="emph2">(9.32%)</span>。</div>
+				
+			</div>
+		</div>
+	</div>
+	<!-- card 7 -->
+	<div class="container middle" id="card7">
+		<div class="inner_container">
+			<div class="title">各年度熱門遊戲</div>
+			<div class="main_container middle">
+				<div class="topgame_container">
+					<div class="select_container">
+						<select>
+							<option value="year1">2019</option>
+							<option value="year2">2018</option>
+							<option value="year3">2017</option>
+							<option value="year4">2016</option>
+							<option value="year5">2015</option>
+						</select>
+					</div>
+					<div class="card7_year middle" id="year1">
+						<div class="game_container">
+							<div class="game_medal"></div>
+							<div class="game_img"></div>
+							<div class="game_des">
+								<p>遊戲名稱：Space Engineers</p>
+								<p>發行日期：2019年02月28日</p>
+								<p>發行商：Keen Software House</p>
+								<p>遊戲類別：動作\獨立\模擬\戰略</p>
+								<p>遊戲標籤：太空\沙盒\建造</p>
+								<p>售價(美金)：15.49</p>
+								<p>銷售量：200萬～500萬</p>
+								<p>平均遊戲時間：01h02m</p>
+								<p>正評：60221（86.24%)</p>
+								<p>負評：9609（13.76%）</p>
+							</div>
+						</div>
+						<div class="game_container">
+							<div class="game_medal"></div>
+							<div class="game_img"></div>
+							<div class="game_des">
+								<p>遊戲名稱：SNOW</p>
+								<p>發行日期：2019年02月14日</p>
+								<p>發行商：Poppermost Productions WastedStudios</p>
+								<p>遊戲類別：免費遊戲\獨立\模擬\體育</p>
+								<p>遊戲標籤：運動\免費遊戲\多人遊戲</p>
+								<p>售價(美金)：0</p>
+								<p>銷售量：100萬～200萬</p>
+								<p>平均遊戲時間：2h16m</p>
+								<p>正評：7235（65.84%</p>
+								<p>負評：3754（34.16%)</p>
+							</div>
+						</div>
+						<div class="game_container">
+							<div class="game_medal"></div>
+							<div class="game_img"></div>
+							<div class="game_des">
+								<p>遊戲名稱：Sekiro :</p>
+								<p>Shadows Die Twice</p>
+								<p>發行日期：2019年03月21日</p>
+								<p>發行商：FromSoftware</p>
+								<p>遊戲類別：動作\冒險</p>
+								<p>遊戲標籤：動作遊戲\類魂系列\困難</p>
+								<p>售價(美金)：49.9</p>
+								<p>銷售量：200萬～500萬</p>
+								<p>平均遊戲時間：0h35m</p>
+								<p>正評：21504（87.69%</p>
+								<p>負評：3019（12.31%</p>
+							</div>
+						</div>
+					</div>
+					<div class="card7_year" id="year2" style="display: none">
+						<div class="card7_year middle" id="year2">
+							<div class="game_container">
+								<div class="game_medal"></div>
+								<div class="game_img"></div>
+								<div class="game_des">
+									<p>遊戲名稱：Rust</p>
+									<p>發行日期：2018年2月8日</p>
+									<p>發行商：Facepunch Studios</p>
+									<p>遊戲類別：動作\冒險\獨立\</p>
+									<p>大型多人遊戲\RPG</p>
+									<p>遊戲標籤：生存\製作\多人遊戲</p>
+									<p>售價(美金)：27.79</p>
+									<p>銷售量：5千萬～1億</p>
+									<p>平均遊戲時間：02h36m</p>
+									<p>正評：220370 (80.4%)</p>
+									<p>負評：53709 (19.6%)</p>
+								</div>
+							</div>
+							<div class="game_container">
+								<div class="game_medal"></div>
+								<div class="game_img"></div>
+								<div class="game_des">
+									<p>遊戲名稱：MONSTER HUNTER : WORLD</p>
+									<p>發行日期：2018年8月9日</p>
+									<p>發行商：CAPCOM Co., Ltd.</p>
+									<p>遊戲類別：動作</p>
+									<p>遊戲標籤：動作遊戲\狩獵\多人遊戲</p>
+									<p>售價(美金)：49.99</p>
+									<p>銷售量：5百萬～1千萬</p>
+									<p>平均遊戲時間：01h49m</p>
+									<p>正評：72029 (67.11%)</p>
+									<p>負評：35294 (32.89%)</p>
+								</div>
+							</div>
+							<div class="game_container">
+								<div class="game_medal"></div>
+								<div class="game_img"></div>
+								<div class="game_des">
+									<p>遊戲名稱：Z1 Battle Royale</p>
+									<p>發行日期：2018年2月28日</p>
+									<p>發行商：NantG</p>
+									<p>戲類別：動作\冒險\免費遊戲\大型多人遊戲</p>
+									<p>遊戲標籤：生存\大型多人遊戲\ 多人遊戲</p>
+									<p>售價(美金)：0</p>
+									<p>銷售量：1千萬～2千萬</p>
+									<p>平均遊戲時間：00h52m</p>
+									<p>正評：111434 (54.87%)</p>
+									<p>負評：91664 (45.13%)</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card7_year" id="year3" style="display: none">
+						<div class="card7_year middle" id="year3">
+							<div class="game_container">
+								<div class="game_medal"></div>
+								<div class="game_img"></div>
+								<div class="game_des">
+									<p>遊戲名稱：PLAYERUNKNOWN'S BATTLEGROUNDS</p>  
+									<p>發行日期：2017年12月21日</p>
+									<p>發行商：PUBG Corporation</p>
+									<p>遊戲類別：動作\冒險\大型多人遊戲</p>
+									<p>遊戲標籤：生存\射擊遊戲\多人遊戲</p>
+									<p>售價(美金)：26.99</p>
+									<p>銷售量：5千萬～1億</p>
+									<p>平均遊戲時間：06h22m</p>
+									<p>正評：496184 (50.46%)</p>
+									<p>負評：487076 (49.54%)</p>
+								</div>
+							</div>
+							<div class="game_container">
+								<div class="game_medal"></div>
+								<div class="game_img"></div>
+								<div class="game_des">
+									<p>遊戲名稱：Unturned</p>
+									<p>發行日期：2017年7月7日</p>
+									<p>發行商：Smartly Dressed Games</p>
+									<p>遊戲類別：動作\冒險\休閒\免費遊戲\獨立</p>
+									<p>遊戲標籤：免費遊戲\生存\殭屍</p>
+									<p>售價(美金)：0</p>
+									<p>銷售量：2千萬～5千萬</p>
+									<p>平均遊戲時間：00h54m</p>
+									<p>正評：292574 (90.29%)</p>
+									<p>負評：31482 (9.71%)</p>
+								</div>
+							</div>
+							<div class="game_container">
+								<div class="game_medal"></div>
+								<div class="game_img"></div>
+								<div class="game_des">
+									<p>遊戲名稱：ARK: Survival Evolved</p>
+									<p>發行日期：2017年8月27日</p>
+									<p>發行商：Studio Wildcard; Instinct Games;Efecto Studios;Virtual Basement LLC</p>                          
+									<p>遊戲類別：動作\冒險\獨立\大型多人遊戲\RPG</p>
+									<p>遊戲標籤：生存\開放世界\多人遊戲</p>
+									<p>售價(美金)：44.99</p>
+									<p>銷售量：500萬～1千萬</p>
+									<p>平均遊戲時間：03h56m</p>
+									<p>正評：145035 (68.53%)</p>
+									<p>負評：66603 (31.47%)</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card7_year" id="year4" style="display: none">
+						<div class="card7_year middle" id="year4">
+							<div class="game_container">
+								<div class="game_medal"></div>
+								<div class="game_img"></div>
+								<div class="game_des">
+									<p>遊戲名稱：Dead by Daylight</p>
+									<p>發行日期：2016年6月14日</p>
+									<p>發行商：Behaviour Digital Inc.</p>
+									<p>遊戲類別：動作</p>
+									<p>遊戲標籤：恐怖\生存恐怖\多人遊戲</p>
+									<p>售價(美金)：14.99</p>
+									<p>銷售量：500萬～1千萬</p>
+									<p>平均遊戲時間：01h38m</p>
+									<p>正評：140721 (75.78%)</p>
+									<p>負評：44985 (24.22%)</p>
+								</div>
+							</div>
+							<div class="game_container">
+								<div class="game_medal"></div>
+								<div class="game_img"></div>
+								<div class="game_des">
+									<p>遊戲名稱：Heroes & Generals</p>
+									<p>發行日期：2016年10月18日</p>
+									<p>發行商：RETO MOTO</p>
+									<p>遊戲類別：動作\免費遊戲\獨立\大型多人遊戲</p>
+									<p>遊戲標籤：免費遊戲\二戰\多人遊戲</p>　　　　　　　
+									<p>售價(美金)：0</p>
+									<p>銷售量：1千萬～2千萬</p>
+									<p>平均遊戲時間：00h29m</p>
+									<p>正評：65856 (65.68%)</p>
+									<p>負評：34416 (34.32%)</p>
+								</div>
+							</div>
+							<div class="game_container">
+								<div class="game_medal"></div>
+								<div class="game_img"></div>
+								<div class="game_des">
+									<p>遊戲名稱：PRICE</p>
+									<p>發行日期：2016年9月15日</p>
+									<p>發行商：YETU GAME</p>
+									<p>遊戲類別：冒險\休閒\獨立</p>
+									<p>遊戲標籤：拼圖\免費遊戲\動漫</p>
+									<p>售價(美金)：0</p>
+									<p>銷售量：20萬～50萬</p>
+									<p>平均遊戲時間：17h38m</p>
+									<p>正評：4198 (94.74%)</p>
+									<p>負評：233 (5.26%)</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card7_year" id="year5" style="display: none">
+						<div class="card7_year middle" id="year5">
+							<div class="game_container">
+								<div class="game_medal"></div>
+								<div class="game_img"></div>
+								<div class="game_des">
+									<p>遊戲名稱：Grand Theft Auto V</p>
+									<p>發行日期：2015年4月13日</p>
+									<p>發行商：Rockstar North</p>
+									<p>遊戲類別：動作\冒險</p>
+									<p>遊戲標籤：開放世界\動作遊戲\多人遊戲 </p>         
+									<p>售價(美金)：24.99</p>
+									<p>銷售量：1千萬～2千萬</p>
+									<p>平均遊戲時間：02h44m</p>
+									<p>正評：329061 (70.26%)</p>
+									<p>負評：139308 (29.74%)</p>
+								</div>
+							</div>
+							<div class="game_container">
+								<div class="game_medal"></div>
+								<div class="game_img"></div>
+								<div class="game_des">
+									<p>遊戲名稱：Clicker Heroes</p>
+									<p>發行日期：2015年5月13日</p>
+									<p>發行商：Playsaurus</p>
+									<p>遊戲類別：冒險\休閒\免費遊戲\獨立\RPG\模擬\戰略</p>
+									<p>遊戲標籤：輕遊戲\免費遊戲\休閒</p>
+									<p>售價(美金)：0</p>
+									<p>銷售量：500萬～1千萬</p>
+									<p>平均遊戲時間：02h42m</p>
+									<p>正評：42530 (89.98%)</p>
+									<p>負評：4734 (10.02%)</p>
+								</div>
+							</div>
+							<div class="game_container">
+								<div class="game_medal"></div>
+								<div class="game_img"></div>
+								<div class="game_des">
+									<p>遊戲名稱：Tom Clancy's Rainbow Six Siege</p>
+									<p>發行日期：2015年12月1日</p>
+									<p>發行商：Ubisoft Montreal</p>
+									<p>遊戲類別：動作</p>
+									<p>遊戲標籤：第一人稱射擊\多人遊戲\戰術</p>                        
+									<p>售價(美金)：16.99</p>
+									<p>銷售量：500萬～1千萬</p>
+									<p>平均遊戲時間：02h05m</p>
+									<p>正評：251178 (80.82%)</p>
+									<p>負評：59620 (19.18%)</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div class="footer" id="footer">
+		<div class="soochow_mark"></div>
+		<div class="bd_mark"></div>
+		<div class="team_container">
+			<div class="team_inner_container">
+				<p></p>
+				<p>指導教授：黃福銘 教授</p>
+				<p>作品團隊：黎芯羽／黃士倫／黃任杰</p>
+				<p>資料來源​：<a href="https://www.kaggle.com/nikdavis/steam-store-games">https://www.kaggle.com/nikdavis/steam-store-games</a></p>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src="./js/count-up/count-up-visible-rcounterup/dist/jquery.rcounter.js"></script>
+	<script src="./js/active.js"></script>
+	<script src="./js/main2.js"></script>
+	<script type="text/javascript">
+		// particle.js
+		particlesJS.load('particles-js', 'particlesjs-config (2).json', function() {
+		  console.log('callback - particles.js config loaded');
+		});
+	</script>
+</body>
+</html>
