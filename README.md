@@ -4,8 +4,8 @@
 **主題**: 誰是一級玩家 <br>
 **組員**: 09370011 黃士倫 08370013 黃任杰  09370014 黎芯羽 <br>
 **指導老師**:黃福銘教授 <br>
-**網站網址**: http://myweb.scu.edu.tw/~09370011/viz/index.html <br>
-**Infographic網址**: http://myweb.scu.edu.tw/~09370011/viz/infographic.html <br>
+**網站網址**: https://shih-lun-huang.github.io/data-visualization-final/ <br>
+**Infographic網址**: https://shih-lun-huang.github.io/data-visualization-final/infographic.html <br>
 
 #### 資料來源、名稱:
 Kaggle - Steam Store Games (Clean dataset) 中 steam.csv 檔案 <br>
