@@ -1,23 +1,83 @@
-//select
-$(function() {
+$(window).bind('load', function() {
+    AOS.init();
+    // alert('hello world')
+    var menu_open = false;
 
-    $("select").on("change", function() {
-        // console.log($(this).val());
-        cl = $(this).val()
-            // console.log(cl)
-        $('.card7_year').each(function() {
-            // console.log(cl)
-            if (cl == $(this).attr('id')) {
-                $(this).show(200)
-            } else {
-                $(this).hide(200)
-            }
-        })
+    get_init_width();
+
+    resize_all();
+
+    toggle_menu_bar();
 
 
+})
+
+// $('body').css('padding-top', $('.navbar').outerHeight() + 'px')
+
+// detect scroll top or down
+if ($('.smart-scroll').length > 0) { // check if element exists
+    var last_scroll_top = 0;
+    $(window).on('scroll', function() {
+        scroll_top = $(this).scrollTop();
+        if (scroll_top < last_scroll_top) {
+            $('.smart-scroll').removeClass('scrolled-down').addClass('scrolled-up');
+        } else {
+            $('.smart-scroll').removeClass('scrolled-up').addClass('scrolled-down');
+        }
+        last_scroll_top = scroll_top;
     });
+}
 
-});
+function get_init_width() {
+    var init_w = $(window).width();
+    // console.log(init_w)
+    if (init_w < 960) {
+        $('.card').removeAttr('data-aos-delay')
+    }
+
+}
+
+function resize_all() {
+    // $('style').text('.timeline::before{height:'+($('.timeline').height()+100)+'px !important;}')
+    $(window).resize(function() {
+
+        // get_timeline_h()
+
+        var w = $(window).width();
+        if (w >= 960) {
+            menu_open = false;
+            $('.menu-btn').removeClass('open')
+            $('.menu_list').hide()
+            $('nav').css('height', 'unset')
+
+            var i = 0;
+            $('.card').each(function() {
+                $(this).attr('data-aos-delay', i)
+                i += 250
+
+            })
+        } else {
+            $('.card').removeAttr('data-aos-delay')
+        }
+    });
+}
+
+function toggle_menu_bar(menu_open) {
+    // let menu_open = false;
+    $('.menu-btn').click(function() {
+        if (!menu_open) {
+            $(this).addClass('open');
+            menu_open = true;
+            $('nav').animate({ height: '100vh' });
+            $('.menu_list').fadeIn(200)
+        } else {
+            $('nav').animate({ height: '60px' });
+            $(this).removeClass('open')
+            $('.menu_list').fadeOut(200)
+            menu_open = false;
+        }
+    })
+}
 
 //video
 
@@ -278,15 +338,7 @@ var data = [{
     marker: { "line": { "width": 2 } },
     pathbar: { "visible": false }
 }];
-// var layout = {
-//   annotations: [{
-//     showarrow: false,
-//     text: "branchvalues: <b>remainder</b>",
-//     x: 0.25,
-//     xanchor: "center",
-//     y: 1.1,
-//     yanchor: "bottom"
-//     }]}
+
 var config = { responsive: true }
 var layout = {
     // showlegend: false,
@@ -294,151 +346,3 @@ var layout = {
     paper_bgcolor: "transparent"
 }
 Plotly.newPlot('treemap_plot', data, layout)
-
-// Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/coffee-flavors.csv', function(err, rows){
-//   function unpack(rows, key) {
-//   return rows.map(function(row) { return row[key]});
-// }
-
-// var data = [{
-//       type: "treemap",
-//       ids: unpack(rows, 'ids'),
-//       labels: unpack(rows, 'labels'),
-//       parents: unpack(rows, 'parents'),
-//       // bgcolor: 'black'
-//     }];
-//     //in config displayModeBar:false
-// var config = {responsive:true}
-// var layout = {
-//   // showlegend: false,
-//   plot_bgcolor:"transparent",
-//   paper_bgcolor:"transparent"
-// }
-// Plotly.newPlot('treemap_plot', data, layout ,config);
-// })
-
-$(window).bind('load', function() {
-    AOS.init();
-    // alert('hello world')
-    var menu_open = false;
-
-    get_timeline_h()
-
-    get_init_width();
-
-    resize_all();
-
-    research_project_btn();
-
-    toggle_menu_bar();
-
-    award_more_btn();
-
-    product_more_btn();
-
-
-})
-
-// $('body').css('padding-top', $('.navbar').outerHeight() + 'px')
-
-// detect scroll top or down
-if ($('.smart-scroll').length > 0) { // check if element exists
-    var last_scroll_top = 0;
-    $(window).on('scroll', function() {
-        scroll_top = $(this).scrollTop();
-        if (scroll_top < last_scroll_top) {
-            $('.smart-scroll').removeClass('scrolled-down').addClass('scrolled-up');
-        } else {
-            $('.smart-scroll').removeClass('scrolled-up').addClass('scrolled-down');
-        }
-        last_scroll_top = scroll_top;
-    });
-}
-
-function get_init_width() {
-    var init_w = $(window).width();
-    // console.log(init_w)
-    if (init_w < 960) {
-        $('.card').removeAttr('data-aos-delay')
-    }
-
-}
-
-function get_timeline_h() {
-    h_arr = []
-    $('.timeline').each(function() {
-        h_arr.push($(this).height())
-    })
-    for (var i = 0; i < h_arr.length; i++) {
-        if (h_arr[i] != 0) {
-            res = h_arr[i]
-        }
-    }
-    // console.log(res)
-    $('style').text('.timeline::before{height:' + (res + 100) + 'px !important;}')
-
-}
-
-function resize_all() {
-    // $('style').text('.timeline::before{height:'+($('.timeline').height()+100)+'px !important;}')
-    $(window).resize(function() {
-
-        get_timeline_h()
-
-        var w = $(window).width();
-        if (w >= 960) {
-            menu_open = false;
-            $('.menu-btn').removeClass('open')
-            $('.menu_list').hide()
-            $('nav').css('height', 'unset')
-
-            var i = 0;
-            $('.card').each(function() {
-                $(this).attr('data-aos-delay', i)
-                i += 250
-
-            })
-        } else {
-            $('.card').removeAttr('data-aos-delay')
-        }
-    });
-}
-
-function research_project_btn() {
-    $('.timeline_btn_list .more_link').click(function() {
-        // console.log(1)
-        $('.more_link.active').removeClass('active');
-        $(this).addClass('active')
-        var text = $(this).attr('data-val')
-            // console.log(text)
-
-        $('.timeline_container').each(function() {
-            if ($(this).attr('id') == text) {
-
-                $(this).fadeIn(200)
-                get_timeline_h()
-                setTimeout(function() { AOS.refresh(); }, 210);
-            } else {
-                $(this).fadeOut(200)
-            }
-        })
-    })
-}
-
-
-function toggle_menu_bar(menu_open) {
-    // let menu_open = false;
-    $('.menu-btn').click(function() {
-        if (!menu_open) {
-            $(this).addClass('open');
-            menu_open = true;
-            $('nav').animate({ height: '100vh' });
-            $('.menu_list').fadeIn(200)
-        } else {
-            $('nav').animate({ height: '60px' });
-            $(this).removeClass('open')
-            $('.menu_list').fadeOut(200)
-            menu_open = false;
-        }
-    })
-}
