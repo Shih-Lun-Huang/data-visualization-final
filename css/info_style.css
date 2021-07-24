@@ -974,9 +974,6 @@ display: none
 }
 
 @media screen and (min-width: 1300px) {
-    .title {
-        /*font-size: 130px;*/
-    }
     .bg {
         /*margin: 23vw auto;*/
         /*background-size: cover;*/
@@ -1002,8 +999,100 @@ display: none
         margin-bottom: 30px;
         margin-left: 20px;
     }
+    .title_crown {
+        height: 60px;
+        width: 60px;
+        top: -20px;
+        left: 70px;
+    }
+    .steam_logo {
+        height: 60px;
+        width: 60px;
+        top: 230px;
+        left: 170px;
+    }
+    .steam_logo .spark_container .spark1:nth-child(1) {
+        width: 25px;
+        height: 25px;
+        left: 350px;
+        top: 5px;
+    }
+    .steam_logo .spark_container .spark1:nth-child(2) {
+        width: 30px;
+        height: 30px;
+        left: 400px;
+        top: 15px;
+    }
+    .steam_logo .spark_container .spark1:nth-child(3) {
+        width: 55px;
+        height: 55px;
+        left: 420px;
+        top: -25px;
+    }
+    .steam_logo .spark_container .spark2 {
+        width: 40px;
+        height: 40px;
+        left: 480px;
+        top: -5px;
+    }
+    .steam_logo_text {
+        width: 180px;
+        height: 60px;
+        top: 8px;
+        left: 75px;
+        font-size: 18px;
+    }
     .graph_text {
         font-size: 20px;
+    }
+    /* title */
+    .title_container {
+        width: 700px;
+    }
+    .title {
+        top: -180px;
+        left: 35px;
+    }
+    .title_text {
+        font-size: 78px;
+        letter-spacing: 4px;
+    }
+    /* G1 */
+    .g1 {
+        top: 315px;
+        left: 95px;
+        width: 410px;
+        height: 150px;
+    }
+    .g1 .graph_text {
+        font-size: 20px;
+    }
+    .g1_1,
+    .g1_2 {
+        width: 100px;
+        height: 100px;
+    }
+    .g1_2 {
+        left: 20px;
+    }
+    .graph1 {
+        width: 205px;
+        height: 155px;
+        left: 435px;
+        top: -10px;
+        display: flex;
+    }
+    .g1_1_text,
+    .g1_2_text {
+        width: 120px;
+        height: 80px;
+        top: 70px;
+        left: -10px;
+    }
+    .check_img {
+        width: 25px;
+        height: 25px;
+        left: 60px;
     }
     /* G2 */
     .g2 {
@@ -1044,6 +1133,29 @@ display: none
         top: 880px;
         width: 400px;
         left: 100px;
+    }
+    .g3 .spark_container .spark1:nth-child(1) {
+        width: 35px;
+        height: 35px;
+        left: 65px;
+        top: -120px;
+    }
+    .g3 .spark_container .spark1:nth-child(3) {
+        width: 40px;
+        height: 40px;
+        top: -20px;
+        left: -40px;
+    }
+    .g3 .spark_container .spark1:nth-child(2) {
+        width: 60px;
+        height: 60px;
+        top: -110px;
+    }
+    .g3 .spark_container .spark2 {
+        width: 35px;
+        height: 35px;
+        left: 80px;
+        top: -80px;
     }
     .ufo1 {
         width: 80px;
@@ -1118,6 +1230,24 @@ display: none
         left: -369px;
         top: -105px;
     }
+    .g4 .spark_container .spark1:nth-child(1) {
+        width: 35px;
+        height: 35px;
+        left: -50px;
+        top: 180px;
+    }
+    .g4 .spark_container .spark1:nth-child(2) {
+        width: 50px;
+        height: 50px;
+        top: 170px;
+        left: 260px;
+    }
+    .g4 .spark_container .spark2 {
+        width: 35px;
+        height: 35px;
+        left: -25px;
+        top: 150px;
+    }
     .graph_text {
         font-size: 16px;
     }
@@ -1165,7 +1295,7 @@ display: none
     }
     /* G6 */
     .g6 {
-        top: 1730px;
+        top: 1735px;
         width: 280px;
         left: 50px;
     }
@@ -1177,6 +1307,9 @@ display: none
     }
     .g6_text p {
         font-size: 14px;
+    }
+    .g6_text span {
+        font-size: 16px;
     }
     /* footer */
     .footer_img_container {
@@ -1219,6 +1352,15 @@ display: none
     }
     .team_inner_container p {
         width: 100%;
-        text-align: center;
+        text-align: left;
+        margin-left: 20px;
+    }
+    .team_container p:nth-child(1) {
+        font-size: 16px;
+    }
+    .team_container p:nth-child(2),
+    .team_container p:nth-child(3) {
+        color: #b1eaf1;
+        font-size: 14px;
     }
 }
