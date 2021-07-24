@@ -34,10 +34,14 @@
 	    color: #fff;
 	}
 	
+	.nav_close {
+	    height: 60px !important;
+	}
+	
 	select {
 	    background-color: #0000ff00;
 	    border: 3px solid #a0a0a0;
-	    color: #fff;
+	    color: #959595;
 	    border-radius: 5px;
 	    width: 15%;
 	    height: 5vh;
@@ -315,7 +319,7 @@
 	    font-size: 32px;
 	}
 	
-	@media screen and (max-width:960px) {
+	@media screen and (max-width:768px) {
 	    nav {
 	        height: 60px;
 	        min-height: 60px;
@@ -371,17 +375,11 @@
 	    }
 	    nav .menu_list ul li a {
 	        text-decoration: none;
-	        color: #000;
+	        color: rgb(255, 255, 255);
 	    }
-	    .ins_icon {
-	        width: 60px;
-	        height: 60px !important;
-	    }
-	    .ins_icon i {
-	        width: 51px;
-	        height: 57px;
-	        left: 4px;
-	        top: 1px;
+	    .chart_scroll {
+	        font-size: 22px !important;
+	        height: 40px !important;
 	    }
 	    .burger div {
 	        transition: all .5s ease-in-out;
@@ -459,6 +457,10 @@
 	
 	nav .nav_list ul {
 	    align-items: unset;
+	}
+	
+	nav .nav_list ul li {
+	    color: #fff;
 	}
 	
 	.nav_logo_container {
@@ -603,11 +605,11 @@
 	}
 	
 	#card1 .des {
-	    font-size: 24px;
+	    font-size: 22px;
 	    height: 150px;
 	    margin: 0 auto;
 	    /*padding-top: 35px;*/
-	    width: 50vw;
+	    width: 55vw;
 	}
 	
 	.card1_img_container {

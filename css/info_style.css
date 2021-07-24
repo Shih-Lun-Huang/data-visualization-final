@@ -1,0 +1,1224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fbf0dd
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    min-height: 50px;
+    height: 60px;
+    min-height: 60px;
+    /*background-color: #053740;*/
+    background-color: rgb(68 68 68 / 75%);
+    z-index: 99;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .2);
+    color: #fff;
+    top: 0;
+}
+
+.scrolled-down {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.scrolled-up {
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+}
+
+nav .nav_logo_container {
+    margin: 0 20px;
+    display: flex;
+}
+
+nav .nav_container {
+    display: flex;
+    justify-content: space-between;
+    /*align-items: center;*/
+}
+
+nav .nav_logo {
+    margin: 10px 10px;
+    background-image: url('./../img/first.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+}
+
+nav .logo_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: default;
+}
+
+nav .logo_text p {
+    font-size: 20px;
+}
+
+nav .nav_logo a {
+    /*color: white;*/
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none
+}
+
+
+/*nav .nav_logo a i{
+color: #25bad0;
+margin: 0 5px;
+}*/
+
+nav .nav_list {
+    width: 55%;
+    margin: 0 30px;
+    max-width: 600px;
+}
+
+nav .menu_list {
+    display: none
+}
+
+nav .nav_list ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .nav_list ul li {
+    list-style: none;
+    width: 140px;
+    text-align: center;
+}
+
+nav .nav_list ul li a {
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: normal;
+    font-size: 13px;
+    /*color: rgba(0,0,0,0.8);*/
+    color: #fff;
+    text-transform: uppercase;
+}
+
+nav .nav_list {
+    margin-top: 22px;
+}
+
+nav .nav_list ul {
+    align-items: unset;
+}
+
+.nav_logo_container {
+    height: 60px;
+}
+
+.dropdown {
+    /*height: 0;*/
+    width: 130px;
+    margin-top: 10px;
+    border: 1px solid #000;
+    display: none
+}
+
+.dropdown div {
+    border-bottom: 1px solid #000;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .25)
+}
+
+.dropdown div:hover {
+    background-color: rgba(255, 255, 255, .75);
+    color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown div a {
+    letter-spacing: 1px !important;
+}
+
+.dropdown div:nth-child(4) {
+    border-bottom: 0px
+}
+
+ul li {
+    cursor: pointer;
+}
+
+ul li:hover div.dropdown {
+    display: block;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    margin: 0 30px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: gray;
+    margin: 5px;
+}
+
+@media screen and (max-width:768px) {
+    nav {
+        height: 60px;
+        min-height: 60px;
+    }
+    nav .nav_list ul li a {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+    #research_project,
+    #honors_and_awards {
+        top: -90px;
+    }
+    .team_main_container {
+        width: 90%;
+    }
+    .my_info {
+        font-size: 19px;
+    }
+    .award_intro {
+        line-height: 1.2rem;
+        font-size: 14px;
+    }
+    .nav_list {
+        display: none
+    }
+    .burger {
+        display: block;
+    }
+    nav .nav_logo_container {
+        margin: 0 5px;
+    }
+    nav .nav_logo {
+        height: 40px;
+        width: 40px;
+    }
+    nav .logo_text p {
+        font-size: 14px
+    }
+    /*rwd*/
+    nav .menu_list ul {
+        height: 80vh;
+        min-height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    nav .menu_list ul li {
+        height: 70px;
+        font-size: 30px;
+        list-style: none;
+        text-decoration: none
+    }
+    nav .menu_list ul li a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+    .chart_scroll {
+        font-size: 22px !important;
+        height: 40px !important;
+    }
+    .burger div {
+        transition: all .5s ease-in-out;
+    }
+    .hide {
+        transform: translateX(-5px);
+        background: transparent;
+    }
+    .transform {
+        transform: rotate(45deg) translate(5px, -5px);
+    }
+    .transform2 {
+        transform: rotate(-45deg) translate(5px, 5px);
+    }
+    .menu-btn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        margin: 0 20px;
+        /* border: 3px solid #fff; */
+    }
+    .menu-btn__burger {
+        width: 45px;
+        height: 4px;
+        background: #a5a5a5;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+        transition: all .5s ease-in-out;
+    }
+    .menu-btn__burger::before,
+    .menu-btn__burger::after {
+        content: '';
+        position: absolute;
+        width: 45px;
+        height: 4px;
+        background: #a5a5a5;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+        transition: all .5s ease-in-out;
+    }
+    .menu-btn__burger::before {
+        transform: translateY(-12px);
+    }
+    .menu-btn__burger::after {
+        transform: translateY(12px);
+    }
+    /* ANIMATION */
+    .menu-btn.open .menu-btn__burger {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+    }
+    .menu-btn.open .menu-btn__burger::before {
+        transform: rotate(45deg) translate(35px, -35px);
+    }
+    .menu-btn.open .menu-btn__burger::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+    }
+    /*award*/
+    .award_more_btn {
+        height: 30px;
+        width: 85px;
+        font-size: 14px;
+    }
+}
+
+.bg {
+    background-image: url(./../img/bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 95%;
+    height: 223vw;
+    background-position: top center;
+    margin: 23vw auto 2vw;
+    /*margin-bottom: 0;*/
+    max-width: 1500px;
+}
+
+.title_container {
+    margin: 0 auto;
+    height: 250px;
+    width: 90%;
+    position: absolute;
+    top: 280px;
+}
+
+.title_crown {
+    background-image: url(./../img/crown.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 90px;
+    width: 9%;
+    position: absolute;
+    top: -3vw;
+    left: 10vw;
+}
+
+.steam_logo {
+    background-image: url(./../img/steam.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 8vw;
+    width: 8vw;
+    position: absolute;
+    top: 26vw;
+    left: 25vw;
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+/*.steam_logo:hover{
+cursor: pointer;
+display: none
+}*/
+
+.steam_logo_text {
+    position: absolute;
+    width: 25vw;
+    height: 100px;
+    top: 2vw;
+    left: 11vw;
+    color: rgb(7 131 143);
+    font-size: 2vw;
+}
+
+.steam_logo_text p:nth-child(2) {
+    position: absolute;
+    left: 30px;
+}
+
+.title {
+    /*font-size: max(11vw,100px);*/
+    font-size: 10vw;
+    font-weight: 500;
+    letter-spacing: 0.5vw;
+    color: #ff9902;
+    transform: rotate(-5deg);
+    position: absolute;
+    left: 4vw;
+    top: -160px;
+}
+
+
+/*graph1*/
+
+.spark_img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: blink normal 2s infinite ease-in-out;
+    position: absolute;
+}
+
+.spark1 {
+    background-image: url(./../img/spark1.png);
+}
+
+.steam_logo .spark_container .spark1:nth-child(1) {
+    width: 3vw;
+    height: 3vw;
+    left: 45vw;
+    top: 3vw;
+    animation-delay: .5s;
+}
+
+.steam_logo .spark_container .spark1:nth-child(2) {
+    width: 4.5vw;
+    height: 4.5vw;
+    left: 52vw;
+    top: 3vw;
+    animation-delay: .2s;
+}
+
+.steam_logo .spark_container .spark1:nth-child(3) {
+    width: 7.5vw;
+    height: 7.5vw;
+    left: 57vw;
+    top: -3vw;
+    animation: blink normal 1.5s infinite ease-in-out;
+}
+
+.steam_logo .spark_container .spark2 {
+    width: 4vw;
+    height: 4vw;
+    left: 63vw;
+    animation-delay: .3s;
+}
+
+.spark2 {
+    background-image: url(./../img/spark2.png);
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.graph_container {
+    /* font-size: 2px; */
+    position: absolute;
+}
+
+.graph_text {
+    color: #fff;
+    font-size: 2.3vw;
+}
+
+.graph_text span {
+    color: #fdb200;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.graph_text span.type2 {
+    color: rgb(255, 236, 179);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.graph1 {
+    width: 35vw;
+    height: 20vw;
+    /*background-color: #ddd;*/
+    position: absolute;
+    left: 51vw;
+    top: -4vw;
+    display: flex;
+}
+
+.g1_1 {
+    width: 50%;
+    height: 14vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('./../img/g1_1.png');
+    background-position: center;
+    position: relative;
+}
+
+.g1_1_text {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./../img/g1_1_text.png);
+    width: 100%;
+    height: 15vw;
+    top: 10vw;
+}
+
+.check_img {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./../img/check.png);
+    width: 35%;
+    height: 5vw;
+    left: 11vw;
+}
+
+.g1_2 {
+    width: 50%;
+    height: 14vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('./../img/g1_2.png');
+    background-position: center;
+    position: relative;
+}
+
+.g1_2_text {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./../img/g1_2_text.png);
+    width: 100%;
+    height: 15vw;
+    top: 10vw;
+}
+
+.graph_outline {
+    width: 45vw;
+    height: 37vw;
+    background-color: #006699;
+    position: absolute;
+    left: 0vw;
+    top: -4vw;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.graph2 {
+    width: 46vw;
+    height: 37vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./../img/g2.png);
+    background-position: center;
+    position: relative;
+}
+
+.graph_hint {
+    color: #fff;
+    font-size: 1vw;
+    position: absolute;
+    top: 35.5vw;
+    left: 1.5vw;
+}
+
+.graph3 {
+    width: 45vw;
+    height: 35vw;
+    /* background-color: #ddd; */
+    position: absolute;
+    left: 41vw;
+    top: -37vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./../img/wordcloud.png);
+    background-position: center;
+}
+
+.g3 .spark_container .spark1:nth-child(1) {
+    width: 4.5vw;
+    height: 4.5vw;
+    left: 8vw;
+    top: -16vw;
+    animation-delay: .3s;
+}
+
+.g3 .spark_container .spark1:nth-child(2) {
+    width: 7.5vw;
+    height: 7.5vw;
+    top: -15vw;
+    animation: blink normal 1.25s infinite ease-in-out;
+    animation-delay: .5s;
+}
+
+.g3 .spark_container .spark1:nth-child(3) {
+    width: 4.5vw;
+    height: 4.5vw;
+    top: 0vw;
+    animation: blink normal 1.5s infinite ease-in-out;
+    animation-delay: .15s;
+    left: -6vw;
+}
+
+.g3 .spark_container .spark2 {
+    width: 4vw;
+    height: 4vw;
+    left: 10vw;
+    top: -10vw;
+    animation-delay: .6s;
+}
+
+.ufo1 {
+    width: 9vw;
+    height: 9vw;
+    /* background-color: #ddd; */
+    position: absolute;
+    left: 30vw;
+    top: -17vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./../img/ufo1.png);
+    background-position: center;
+}
+
+.ufo2 {
+    width: 11vw;
+    height: 11vw;
+    /* background-color: #ddd; */
+    position: absolute;
+    left: 74vw;
+    top: -36vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./../img/ufo2.png);
+    background-position: center;
+}
+
+.purple_planet {
+    width: 28vw;
+    height: 24vw;
+    /* background-color: #ddd; */
+    position: absolute;
+    left: 55vw;
+    top: 10vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./../img/purple_planet.png);
+    background-position: center;
+}
+
+.planet_monster {
+    width: 11vw;
+    height: 11vw;
+    /* background-color: #ddd; */
+    position: absolute;
+    left: 64vw;
+    top: .4vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./../img/planet_monster.png);
+    background-position: center;
+}
+
+.graph4_outline {
+    width: 45vw;
+    height: 31vw;
+    left: -49vw;
+    top: -13vw;
+}
+
+.graph4 {
+    width: 46vw;
+    height: 42vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./../img/g4.png);
+    background-position: center;
+    position: relative;
+}
+
+.graph4_hint_img {
+    position: absolute;
+    height: 5vw;
+    width: 5vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./../img/hint.png);
+    background-position: center;
+    top: 19vw;
+    left: -47vw;
+}
+
+.graph4_des {
+    height: 15vw;
+    width: 30vw;
+    position: absolute;
+    top: 20vw;
+    left: -41vw;
+    font-size: 1.5vw;
+    color: rgb(7 131 143)
+}
+
+.g4 .spark_container .spark1:nth-child(1) {
+    width: 4vw;
+    height: 4vw;
+    left: -8vw;
+    top: 25vw;
+    animation-delay: .2s;
+}
+
+.g4 .spark_container .spark1:nth-child(2) {
+    width: 5vw;
+    height: 5vw;
+    top: 25vw;
+    left: 33vw;
+    animation-delay: .5s;
+}
+
+.g4 .spark_container .spark2 {
+    width: 3.5vw;
+    height: 3.5vw;
+    left: -3vw;
+    top: 21vw;
+    animation-delay: .2s;
+    animation: blink normal 1.75s infinite ease-in-out;
+}
+
+.handler_img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./../img/game_handler.png);
+    background-position: center;
+    height: 26vw;
+    width: 26vw;
+    left: 3vw;
+    top: 13vw;
+    position: absolute;
+}
+
+.g5_hint {
+    font-size: 1.1vw;
+    position: absolute;
+    top: 16.6vw;
+    left: 36vw;
+    color: rgb(7 131 143);
+}
+
+.clock_img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./../img/clock.png);
+    background-position: center;
+    height: 6vw;
+    width: 6vw;
+    left: -20vw;
+    top: 10vw;
+    position: absolute;
+}
+
+.graph5 {
+    width: 35vw;
+    height: 20vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./../img/g5.png);
+    background-position: center;
+    position: absolute;
+    left: -25vw;
+    top: 9vw;
+}
+
+.graph5_text {
+    width: 30vw;
+    height: 16vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./../img/g5_text.png);
+    background-position: center;
+    position: absolute;
+    left: 2vw;
+    top: 12vw;
+    transform: rotate(-3deg);
+}
+
+.g1 {
+    top: 39.7vw;
+    left: 12vw;
+    width: 50%;
+    height: 150px;
+}
+
+.g2 {
+    top: 60vw;
+    width: 80%;
+    left: 6vw;
+    height: 300px;
+    position: absolute;
+}
+
+.g2_text {
+    width: 39%;
+    left: 55vw;
+    top: 2vw;
+    position: absolute;
+}
+
+.g2_text p {
+    font-size: 2.6vw;
+}
+
+.g2_text span {
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.g3 {
+    top: 113vw;
+    width: 60%;
+    left: 12vw;
+}
+
+.g3_text p {
+    font-size: 3vw;
+}
+
+.g3_text span {
+    font-size: 3.4vw;
+}
+
+.g4 {
+    top: 150.5vw;
+    width: 40%;
+    left: 53vw;
+}
+
+.g4_text p {}
+
+.g4_text span {
+    font-size: 2.7vw
+}
+
+.g5 {
+    top: 189vw;
+    width: 63%;
+    left: 22vw;
+}
+
+.g6 {
+    top: 226vw;
+    width: 39%;
+    left: 6.5vw;
+}
+
+.g6_text p {
+    font-size: 1.9vw;
+}
+
+.g6_text span {
+    font-size: 2.2vw;
+}
+
+.graph6 {
+    width: 50vw;
+    height: 40vw;
+    /*background-color: #ddd;*/
+    position: absolute;
+    left: 40vw;
+    top: -14vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('./../img/last_graph.png');
+}
+
+.footer_img_container {
+    height: 25vw;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+}
+
+.footer_img_container .footer_img {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 12vw;
+    width: 12vw;
+}
+
+.footer_img_container .footer_img:nth-child(1) {
+    background-image: url('./../img/rocket.png');
+    height: 25vw;
+    width: 25vw;
+}
+
+.footer_img_container .footer_img:nth-child(2) {
+    background-image: url('./../img/monster1.png');
+}
+
+.footer_img_container .footer_img:nth-child(3) {
+    background-image: url('./../img/monster2.png');
+}
+
+.footer_img_container .footer_img:nth-child(4) {
+    background-image: url('./../img/monster3.png');
+}
+
+.footer_img_container .footer_img:nth-child(5) {
+    background-image: url('./../img/monster4.png');
+}
+
+.footer_img_container .footer_img:nth-child(6) {
+    background-image: url('./../img/monster5.png');
+}
+
+.footer_img_container .footer_img:nth-child(7) {
+    background-image: url('./../img/monster6.png');
+}
+
+.footer {
+    background-color: rgb(0 119 127);
+    height: 20vw;
+    width: 100%;
+    display: flex;
+}
+
+.soochow_mark {
+    height: 20vw;
+    width: 25%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('./../img/scu_mark.png');
+    background-position: center;
+}
+
+.bd_mark {
+    height: 20vw;
+    width: 25%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('./../img/bd_mark.png');
+    background-position: center;
+}
+
+.team_container,
+.team_image_container {
+    height: 20vw;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 25px;
+}
+
+.team_inner_container {
+    height: 14vw;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.team_container p {
+    margin: 0;
+}
+
+.team_container p:nth-child(1) {
+    font-size: 2.5vw;
+    color: #fff;
+}
+
+.team_container p:nth-child(2),
+.team_container p:nth-child(3) {
+    color: #b1eaf1;
+    font-size: 2vw;
+}
+
+.team_container p:nth-child(4) {
+    font-size: 1.5vw;
+    color: #4ecfdf;
+}
+
+@media screen and (min-width: 1300px) {
+    .title {
+        /*font-size: 130px;*/
+    }
+    .bg {
+        /*margin: 23vw auto;*/
+        /*background-size: cover;*/
+        max-width: unset;
+    }
+    .title_crown {
+        top: -30px;
+        /*left: 130px;*/
+    }
+    .steam_logo {
+        top: 27vw;
+        height: 8vw;
+        width: 8vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bg {
+        height: 1650px;
+        width: 705px;
+        margin: unset;
+        margin-top: 200px;
+        margin-bottom: 30px;
+        margin-left: 20px;
+    }
+    .graph_text {
+        font-size: 20px;
+    }
+    /* G2 */
+    .g2 {
+        top: 475px;
+        width: 310px;
+        left: 120px;
+        height: 290px;
+    }
+    .graph2 {
+        width: 330px;
+        height: 290px;
+    }
+    .graph2 .graph_hint {
+        font-size: 12px;
+        top: 269px;
+        left: 20px;
+    }
+    .graph_outline {
+        width: 330px;
+        height: 280px;
+        left: -70px;
+        top: -30px;
+    }
+    .g2_text p {
+        font-size: 20px;
+    }
+    .g2_text span {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .g2_text {
+        width: 240px;
+        left: 300px;
+        top: 20px;
+    }
+    /* G3 */
+    .g3 {
+        top: 880px;
+        width: 400px;
+        left: 100px;
+    }
+    .ufo1 {
+        width: 80px;
+        height: 80px;
+        left: 210px;
+        top: -140px;
+    }
+    .ufo2 {
+        width: 80px;
+        height: 80px;
+        left: 570px;
+        top: -275px;
+    }
+    .graph3 {
+        width: 380px;
+        height: 290px;
+        left: 275px;
+        top: -300px;
+    }
+    .purple_planet {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 400px;
+        top: 60px;
+    }
+    .planet_monster {
+        width: 80px;
+        height: 80px;
+        left: 465px;
+        top: 5px;
+    }
+    .g3_text p {
+        font-size: 20px;
+    }
+    .g3_text span {
+        font-size: 24px;
+    }
+    .g4 {
+        top: 1163px;
+        width: 300px;
+        left: 380px;
+    }
+    .graph4 {
+        width: 360px;
+        height: 255px;
+    }
+    .graph_hint {
+        font-size: 12px;
+        top: 239px;
+        left: 20px;
+    }
+    .graph4_des {
+        height: 100px;
+        width: 250px;
+        top: 160px;
+        left: -320px;
+        font-size: 12px;
+    }
+    .g4_text span {
+        font-size: 20px;
+    }
+    .graph4_hint_img {
+        height: 30px;
+        width: 30px;
+        top: 155px;
+        left: -350px;
+    }
+    .graph4_outline {
+        width: 350px;
+        height: 255px;
+        left: -369px;
+        top: -105px;
+    }
+    .graph_text {
+        font-size: 16px;
+    }
+    .handler_img {
+        height: 180px;
+        width: 180px;
+        left: 60px;
+        top: 95px;
+    }
+    /* G5 */
+    .g5 {
+        top: 1460px;
+        width: 500px;
+        left: 150px;
+    }
+    .graph5 {
+        width: 220px;
+        height: 150px;
+        left: -140px;
+        top: 60px;
+    }
+    .g5_hint {
+        font-size: 12px;
+        position: absolute;
+        top: 110px;
+        left: 320px;
+        color: rgb(7 131 143);
+        width: 280px;
+    }
+    .clock_img {
+        height: 40px;
+        width: 40px;
+        left: -135px;
+        top: 40px;
+    }
+    .g5 .graph_text {
+        font-size: 16px;
+    }
+    .graph5_text {
+        width: 200px;
+        height: 100px;
+        left: 0px;
+        top: 95px;
+        transform: rotate( -4deg);
+    }
+    /* G6 */
+    .g6 {
+        top: 1730px;
+        width: 280px;
+        left: 50px;
+    }
+    .graph6 {
+        width: 360px;
+        height: 270px;
+        left: 320px;
+        top: -80px;
+    }
+    .g6_text p {
+        font-size: 14px;
+    }
+    /* footer */
+    .footer_img_container {
+        height: 200px;
+        width: 768px;
+        align-items: flex-end;
+    }
+    .footer_img_container .footer_img:nth-child(1) {
+        height: 180px;
+        width: 180px;
+    }
+    .footer_img_container .footer_img {
+        height: 90px;
+        width: 90px;
+    }
+    .footer {
+        height: 120px;
+        width: 768px;
+        justify-content: center;
+        align-items: center;
+    }
+    .soochow_mark {
+        width: 180px;
+        /* margin-top: 10px; */
+        height: 75px;
+    }
+    .bd_mark {
+        width: 180px;
+        /* margin-top: 10px; */
+        height: 75px;
+    }
+    .team_container {
+        width: 300px;
+        height: 90px;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .team_inner_container {
+        height: 100px;
+    }
+    .team_inner_container p {
+        width: 100%;
+        text-align: center;
+    }
+}
